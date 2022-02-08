@@ -1,16 +1,19 @@
-import { useState } from "react";
+import React, {useState}  from 'react';
 
-export const useCounter = (initialValue = 0) => {
-  const [counter, setCounter] = useState(initialValue);
+function ItemCount ( {initial}) {
+    const [ contador,setContador ] = useState(1);
 
-  const increment = () => {
-    setCounter(counter + 1);
-  };
-  const decrement = () => {
-    setCounter(counter - 1);
-  };
-  const resetCounter = () => {
-    setCounter(initialValue);
-  };
-  return { counter, increment, decrement, resetCounter };
+
+return <>
+<div className='p-3 mx-2 bg-light text-dark'>
+<h1>{contador}</h1>
+<button className='btn btn-primary p-3 mx-3 ' onClick={() => setContador(contador+1)}>+</button>;
+<button className='btn btn-primary p-3  mx-3' onClick={() => setContador(contador-1)}>-</button>;
+</div>
+
+<button className='btn btn-dark'>Añadir al carrito</button>
+</>
+
 };
+
+export default ItemCount;
