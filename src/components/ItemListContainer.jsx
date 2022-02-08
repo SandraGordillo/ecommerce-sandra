@@ -1,8 +1,8 @@
 import React from 'react';
 
-function ItemListContainer() {
+const ItemListContainer = ({texto}) =>{
   return <div>
-      <h2> 3 </h2>
+  <h1>{texto}</h1>
   </div>;
 }
 
