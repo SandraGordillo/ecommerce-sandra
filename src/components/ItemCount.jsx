@@ -1,7 +1,10 @@
 import React, {useState}  from 'react';
 
-function ItemCount ( {initial}) {
-    const [ contador,setContador ] = useState(1);
+function ItemCount ( {initial,stock}) {
+    const [ contador,setContador ] = useState(initial);
+    
+    
+    
 
 
 return <>
