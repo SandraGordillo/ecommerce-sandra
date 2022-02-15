@@ -1,17 +1,12 @@
 import React from 'react'
+import Item from './Item'
 
-function ItemList({Items}) {
+const ItemList = ({data}) => {
   return (
     <div>
-           <div className="Contenedor" >
-            <h3 className="" >{Items.nombre}</h3>
-            <p className="">{Items.banda}</p>
-            <p className="">{Items.precio}</p>
-            <img className="" src={Items.imagen} alt="disco" />
-            <p className="">Disponible:{Items.Stock}</p>
-            <button className="">Comprar</button>
-        </div>
+        <>{ data && data.map(Items => <Item Items={Items} key={Items.id} />)}</>
     </div>
+
   )
 }
 

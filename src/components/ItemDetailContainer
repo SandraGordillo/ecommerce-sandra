@@ -1,0 +1,38 @@
+import { useEffect, useState } from "react";
+
+const ItemDetailContainer= () => {
+    const detail =  {
+        title: "nombre o titulo del producto",
+        precio: 10000,
+        descripcion: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias deleniti delectus, at minus libero sed, doloremque amet expedita nulla pariatur veritatis repudiandae nihil dolorum nisi dolore dolores atque hic blanditiis natus ab. Ut possimus praesentium repudiandae illum, nulla sunt exercitationem consequatur ipsam impedit consequuntur asperiores minima dolor animi neque vel!",
+        img: "https://i.ibb.co/rwTCnd8/tomate500.png"
+    }
+    const [info, setInfo] = useState({})
+
+    useEffect(() => {
+        const tarea = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(detail)
+
+            }, 500)
+        })
+        tarea.then((result) => {
+            setInfo(result)
+        })
+            .catch((err) => {
+                console.log("error: " + err)
+            })
+    })
+
+    return (
+        <ItemDetail itemsDetail={detail} />
+    )
+
+
+
+
+
+}
+
+
+export default ItemDetailContainer
