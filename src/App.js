@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <Navbar/> 
-      <ItemListContainer texto ="Bienvenidos a Music site"/>
+      <ItemListContainer/>
       <ItemCount initial={1} stock={10}/>
       <Rutas/>
     </div>

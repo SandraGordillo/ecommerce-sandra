@@ -6,7 +6,6 @@ const ItemList = ({data}) => {
     <div>
         <>{ data && data.map(Items => <Item Items={Items} key={Items.id} />)}</>
     </div>
-
   )
 }
 

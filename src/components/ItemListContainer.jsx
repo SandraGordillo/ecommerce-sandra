@@ -11,7 +11,7 @@ const ItemListContainer = () => {
           {  id: 3, nombre: "Bunbury Expectativas", banda: "Enrique Bunbury", precio: 500000, imagen: "https://www.mautorland.com/wp-content/uploads/2017/10/IMG_0504.jpg", Stock: 6 },
       ]
   
-      const [Items, setItems] = useState([null]);
+      const [Items, setItems] = useState();
   
       useEffect(() => {
       
@@ -20,17 +20,15 @@ const ItemListContainer = () => {
                   resolve(data)
               }, 2000);
           }).then((result) => setItems (result));
+        }, []);
   
-    return () => {
-      setItems ([ ]);
-    };
-  });
+  };
 
   return (
- <div>
+  <div>
   <ItemList data={Items} />
   </div>
   );
-};
- 
+
+
 export default ItemListContainer;
