@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import ItemListContainer from '../components/ItemListContainer'
-import ItemListContainer from '../components/CartWidget'
+import CartWidget from '../components/CartWidget'
 
 const Rutas = ()  => {
 return (

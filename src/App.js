@@ -10,7 +10,6 @@ function App() {
     <div className="App">
       <Navbar/> 
       <ItemListContainer/>
-      <ItemCount initial={1} stock={10}/>
       <Rutas/>
     </div>
   );
