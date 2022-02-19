@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
+import ItemCount from "./ItemCount";
 import ItemDetail from './ItemDetail';
 
 
 function ItemDetailContainer() {
+    <ItemCount/>
     const detail = {
         title: "Cancion animal",
         precio: 800000,
@@ -29,5 +31,6 @@ function ItemDetailContainer() {
     return (
         <ItemDetail itemsDetail={info} />
     );
+    
 }
 export default ItemDetailContainer
