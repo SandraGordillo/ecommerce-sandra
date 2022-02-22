@@ -1,22 +1,31 @@
 import React, {useState}  from 'react';
 
-function ItemCount ( {initial,stock}) {
-    const [ contador,setContador ] = useState(initial);
-    
-    
-    
-    
+function ItemCount({ initial, stock}) {
+    const [contador, setContador] = useState(initial);
+
+    const onAdd = () => {
+        if (contador < stock) {
+            setContador(contador + 1);
+        }
+    };
+
+    const OnReduce = () => {
+        if (contador > 1) {
+            setContador(contador - 1);
+        }
+    };
 
 
-return <>
-<div className='p-3 mx-2 bg-light text-dark'>
-<h1>{contador}</h1>
-<button className='btn btn-primary p-3 mx-3 ' onClick={() => setContador(contador+1)}>+</button>;
-<button className='btn btn-primary p-3  mx-3' onClick={() => setContador(contador-1)}>-</button>;
-</div>
+    return (
 
-<button className='btn btn-dark'>Añadir al carrito</button>
-</>
+        <div className='p-3 mx-2 bg-light text-dark'>
+            <h1>{contador}</h1>
+            <button onClick={() => OnReduce()} className='btn btn-primary p-3 mx-3 '>-</button>;
+            <button onClick={() => onAdd()} className='btn btn-primary p-3  mx-3'>+</button>;
+        </div>,
+        <button onClick={() => onAdd()} className='btn btn-dark'>Añadir al carrito</button>
+
+    );
 
 };
 
