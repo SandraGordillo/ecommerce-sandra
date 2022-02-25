@@ -1,6 +1,6 @@
-import React, {useState}  from 'react';
+import React, { useState } from 'react';
 
-function ItemCount({ initial, stock}) {
+function ItemCount({ initial, stock }) {
     const [contador, setContador] = useState(initial);
 
     const onAdd = () => {
@@ -16,15 +16,15 @@ function ItemCount({ initial, stock}) {
     };
 
 
-    return (
+    return (  <> 
 
-        <div className='p-3 mx-2 bg-light text-dark'>
+        <div className='p-3 mx-2'>
             <h1>{contador}</h1>
             <button onClick={() => OnReduce()} className='btn btn-primary p-3 mx-3 '>-</button>;
             <button onClick={() => onAdd()} className='btn btn-primary p-3  mx-3'>+</button>;
-        </div>,
+        </div>
         <button onClick={() => onAdd()} className='btn btn-dark'>Añadir al carrito</button>
-
+        </> 
     );
 
 };

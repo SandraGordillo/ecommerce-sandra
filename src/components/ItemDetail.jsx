@@ -1,15 +1,15 @@
 import React from 'react'
 import ItemCount from './ItemCount'
 
-function ItemDetail({title},{precio},{descripcion},{img}) {
+function ItemDetail({itemsDetail }) {
   return (
-    
+
     <div>
-      <h1>Producto: {title} </h1>
-      <h2>Precio:{precio} </h2>
-      <h2>Descripcion:{descripcion} </h2>
-      <img src={img} />
-      <ItemCount initial={1} stock={10}/> 
+      <h1>Producto: {itemsDetail.title} </h1>
+      <h2>Precio:{itemsDetail.precio} </h2>
+      <h6>Descripcion:{itemsDetail.descripcion} </h6>
+      <img src={itemsDetail.img} />
+      <ItemCount initial={1} stock={10} />
     </div>
   )
 }
