@@ -18,10 +18,7 @@ const ItemListContainer = (props) => {
   useEffect(() => {
 
     const tarea = new Promise((resolve, reject) => {
-      // setTimeout(() => {
-      //   resolve(productos);
-      // }, 2000);
-
+  
       resolve(data);
     });
 
