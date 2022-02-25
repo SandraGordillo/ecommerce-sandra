@@ -23,7 +23,7 @@ function ItemCount({ initial, stock }) {
             <button onClick={() => OnReduce()} className='btn btn-primary p-3 mx-3 '>-</button>;
             <button onClick={() => onAdd()} className='btn btn-primary p-3  mx-3'>+</button>;
         </div>
-        <button onClick={() => onAdd()} className='btn btn-dark'>Añadir al carrito</button>
+
         </> 
     );
 

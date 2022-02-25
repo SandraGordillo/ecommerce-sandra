@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import ItemListContainer from '../components/ItemListContainer'
-import CartWidget from '../components/CartWidget'
+import Cart from '../components/Cart'
 import Navbar from '../components/Navbar'
 import ItemDetailContainer from '../components/ItemDetailContainer'
-import ItemCount from '../components/ItemCount'
+
 
 const Rutas = () => {
     return (
@@ -11,11 +11,9 @@ const Rutas = () => {
             <Navbar />
             <Routes>
                 <Route path='/' element={<ItemListContainer />} />
-                <Route path='/cartwidget' element={<CartWidget />} />
+                <Route path='/Cart' element={<Cart/>} />
                 <Route path='/Items/:id' element={<ItemDetailContainer />} />
-                <Route path='/categoria/:categoria' element={<ItemCount initial={1} stock={10} />} />
-
-
+                <Route path="/category/:categoryId" element={<ItemListContainer />} />
             </Routes>
 
         </BrowserRouter>

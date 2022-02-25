@@ -1,7 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useParams } from "react-router-dom"
 
 const Item = ({ Items }) => {
+
+  const params = useParams()
+  
   return (
     <div>
       <div className="Contenedor" >
